@@ -38,6 +38,17 @@ void AddPhoneBook(string path)
     InputValue(out var firstname, "Iм'я");
     InputValue(out var lastname, "Прiзвище");
     InputValue(out var phonenumber, "Номер телефона");
+    // Зробив тільки один try. Потім ще спробую
+    try
+    {
+        int NumberTry = Int32.Parse(phonenumber);
+    }
+    catch
+    {
+        Console.WriteLine("Не правильно вели номер телефону");
+    }
+
+
 
     File.AppendAllLines(
         path,
